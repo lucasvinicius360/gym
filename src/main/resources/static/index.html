@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Fit</title>
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.css" />
+    <script type="text/javascript" src="semantic/semantic.js"></script>
+    <style>
+        body {
+            background-image: url("imgs/pexels-leon-ardho-1552242.jpg");
+
+            height: 500px;
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+        }
+
+        #divButtons {
+            margin-top: 19%;
+            margin-left: 35%;
+            width: 10vw;
+        }
+
+        #loginDiv {
+            width: 15vw;
+            height: 10vh;
+        }
+
+        #cadastro {
+            width: 15vw;
+            height: 10vh;
+        }
+
+        #or {
+            width: 15vw;
+            height: 10vh;
+        }
+
+        #divForm {
+            width: 35vw;
+            height: 25vh;
+            margin-top: 16%;
+            margin-left: 35%;
+        }
+
+        #divCad {
+            width: 35vw;
+            height: 32vh;
+            margin-top: 16%;
+            margin-left: 35%;
+        }
+        #divPay{
+            background-color: blueviolet;
+            width: 35vw;
+            height: 25vh;
+            margin-top: 16%;
+            margin-left: 35%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ui large buttons" id="divButtons">
+        <button class="ui large violet button" id="loginDiv" onclick="cssLoginDiv()">Login</button>
+        <div class="or" id="or"></div>
+        <button class="ui large pink button" id="cadastro">Save</button>
+    </div>
+
+    <div class="ui violet inverted segment" id="divForm" style="display:none;">
+        <div class="ui inverted form">
+            <div class="two fields">
+                <div class="field">
+                    <label>Login</label>
+                    <input placeholder="Login ex: xalala" type="text">
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input placeholder="Password ex: 5666dfg" type="text">
+                </div>
+            </div>
+            <div class="inline field">
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" id="checkFields">
+                    <label>I agree to the terms and conditions</label>
+                </div>
+            </div>
+            <div class="ui submit button" id="login">Entrar</div>
+            <div class="ui submit button" id="backLogin">Voltar</div>
+        </div>
+    </div>
+
+
+    <div class="ui pink inverted segment" id="divCad" style="display:none; height: 45vh">
+        <div class="ui inverted form">
+            <div class="two fields">
+                <div class="field">
+                    <label>Nome</label>
+                    <input placeholder="Login ex: Rocheli" type="text" id="nameUser">
+                </div>
+                <div class="field">
+                    <label>CPF</label>
+                    <input placeholder="Password ex: 56666987451" type="number" id="cpf">
+                </div>
+            </div>
+
+            <div class="two fields">
+                <div class="field">
+                    <label>Altura</label>
+                    <input placeholder="Altura ex: 1.85m" type="text" id="altura">
+                </div>
+                <div class="field">
+                    <label>Peso</label>
+                    <input placeholder="Peso ex: 56Kg" type="text" id="peso">
+                </div>
+            </div>
+
+            <div class="two fields">
+                <div class="field">
+                    <label>Email</label>
+                    <input placeholder="Email ex: xalala@dev.com" type="text" id="dsEmail">
+                </div>
+                
+            </div>
+
+            <div class="two fields">
+                
+                <div class="ui submit button" id="saveUser" style="margin-top: 24px;height: 5vh;margin-left: 174px;"
+                    onclick="saveUser()">Save
+                </div>
+                <div class="ui submit button" id="backCad" style="margin-top: 24px;height: 5vh;">
+                    Voltar
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="ui pink inverted segment" id="divPay" style="height: 15vh;width: 25vw;display: none;">
+        <div class="ui inverted form">
+           
+            <div class="two fields">
+                <div class="field">
+                    <label>Valor do pagamento</label>
+                    <input placeholder="First Name" type="text" id="vlPay"> 
+                </div>
+                <div class="ui submit button" style="margin-top: 24px;height: 5vh;width: 10vw;margin-left: 14px;" onclick="toGoPay()">Pay</div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/index.js"></script>
