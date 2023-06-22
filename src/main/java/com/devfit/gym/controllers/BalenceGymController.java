@@ -5,6 +5,7 @@ package com.devfit.gym.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -66,7 +67,7 @@ public class BalenceGymController {
 
     @ResponseBody
     @RequestMapping(path = "/balanceById/{userId}",method = RequestMethod.GET)
-    public Object balenceById(Integer userId){
+    public Object balenceById(@PathVariable Integer userId){
         Object resultQuery = balenceGymRepository.findByUserId(userId);
         return resultQuery;
     }
