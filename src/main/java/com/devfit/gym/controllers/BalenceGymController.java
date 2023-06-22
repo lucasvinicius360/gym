@@ -62,4 +62,12 @@ public class BalenceGymController {
         Object resultQuery = balenceGymRepository.findAll();
         return resultQuery;
     }
+
+
+    @ResponseBody
+    @RequestMapping(path = "/balanceById/{userId}",method = RequestMethod.GET)
+    public Object balenceById(Integer userId){
+        Object resultQuery = balenceGymRepository.findByUserId(userId);
+        return resultQuery;
+    }
 }
