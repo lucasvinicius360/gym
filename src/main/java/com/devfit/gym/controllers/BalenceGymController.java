@@ -64,11 +64,15 @@ public class BalenceGymController {
         return resultQuery;
     }
 
-
+    /**
+     * 
+     * @param userId foreign key of table user_of_gym
+     * @return returns all payments from id
+     */
     @ResponseBody
     @RequestMapping(path = "/balanceById/{userId}",method = RequestMethod.GET)
     public Object balenceById(@PathVariable Integer userId){
-        Object resultQuery = balenceGymRepository.findByUserId(userId);
+        Object resultQuery = balenceGymRepository.balenceId(userId);
         return resultQuery;
     }
 }
