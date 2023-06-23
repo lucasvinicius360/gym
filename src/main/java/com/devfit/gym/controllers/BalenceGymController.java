@@ -50,7 +50,7 @@ public class BalenceGymController {
             System.out.println("ERRO: " + e.getMessage());
         }
         
-        balenceGym = insertBalanceDToRepository.getInsertPay(userId);
+        balenceGym = balenceById(userId);
 
         return new ResponseEntity<>(balenceGym,HttpStatus.CREATED);
 
