@@ -2,6 +2,7 @@ package com.devfit.gym.controllers;
 
 
 
+import org.hibernate.mapping.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -72,7 +73,13 @@ public class BalenceGymController {
     @ResponseBody
     @RequestMapping(path = "/balanceById/{userId}",method = RequestMethod.GET)
     public Object balenceById(@PathVariable Integer userId){
+
+
         Object resultQuery = balenceGymRepository.balenceId(userId);
+
+        System.out.println(resultQuery.getClass().getMethods());
+
+        
         return resultQuery;
     }
 }
