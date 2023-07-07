@@ -22,12 +22,12 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "balence_gym")
+@Table(name = "balance_gym")
 public class BalenceGym {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_balence")
+    @Column(name = "id_balance")
     private Long idBalance;
     
     @ManyToOne
@@ -37,7 +37,7 @@ public class BalenceGym {
     @Column(name = "dt_pay")
     private Date dtPay;
 
-    @Column(name = "vlPay")
+    @Column(name = "vl_pay")
     private Integer vlPay;
 
     public void setDtPay() {
