@@ -15,12 +15,12 @@ import com.devfit.gym.models.UserOfGym;
 public interface BalenceGymRepository extends JpaRepository<BalenceGym,Long> {
     
     @Query(nativeQuery = true, value = "select * from "
-            +"user_of_gym uog ,balence_gym bg where uog.id_user = bg.user_id")
+            +"user_of_gym uog ,balance_gym bg where uog.id_user = bg.user_id")
     List<BalenceGym>balenceGeral();
 
     
 
-    @Query(nativeQuery = true, value = "select * from balence_gym where user_id = :userId")
+    @Query(nativeQuery = true, value = "select * from balance_gym where user_id = :userId")
     List<Object>balenceId(@Param("userId") Integer userId);
 
     
